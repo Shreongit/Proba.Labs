@@ -1,151 +1,297 @@
-<h1 align="center">Proba Labs</h3>
+<div align="center">
 
+# 🧪 PROBA LABS
 
-<h3 align="center">AI Model Evaluation & Quality Engineering Platform</h3>
+### AI Model Evaluation & Quality Engineering Platform
 
-<p align="center">
-  A unified platform for testing, evaluating, analyzing, and improving machine learning models.
-</p>
+**Evaluate. Analyze. Validate. Improve.**
 
-<p align="center">
-  <i>Build intelligent systems. Test their limits. Engineer reliability.</i>
-</p>
+A unified environment for evaluating machine learning models, uncovering weaknesses, measuring reliability, and understanding model behavior.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/STATUS-IN%20DEVELOPMENT-orange?style=flat-square" />
-</p>
+<br/>
 
-<p align="center">
-  <a href="#overview">Overview</a> •
-  <a href="#what-is-proba-labs">What Is Proba Labs?</a> •
-  <a href="#how-it-works">How It Works</a> •
-  <a href="#core-capabilities">Core Capabilities</a> •
-  <a href="#technology-stack">Tech Stack</a> •
-  <a href="#vision">Vision</a>
-</p>
+![Status](https://img.shields.io/badge/STATUS-IN%20DEVELOPMENT-F97316?style=for-the-badge)
+![Domain](https://img.shields.io/badge/DOMAIN-AI%20%2F%20ML-2563EB?style=for-the-badge)
+![Focus](https://img.shields.io/badge/FOCUS-MODEL%20QUALITY-6C63FF?style=for-the-badge)
+![PRs Welcome](https://img.shields.io/badge/PRs-WELCOME-16A34A?style=for-the-badge)
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+
+<br/>
+
+[Overview](#-overview) •
+[Philosophy](#-philosophy) •
+[Pipeline](#-evaluation-pipeline) •
+[Capabilities](#-core-capabilities) •
+[Architecture](#-architecture) •
+[Tech Stack](#-technology-stack) •
+[Roadmap](#-roadmap) •
+[Contributing](#-contributing)
+
+</div>
 
 ---
 
 ## 🧭 Overview
 
-Machine learning models can achieve impressive results during development but behave differently when exposed to real-world data, unexpected inputs, and changing conditions.
+Building a model that produces accurate predictions is only part of the challenge. The harder questions come after:
 
-**Proba Labs** is designed to address this challenge by providing a centralized environment for evaluating the quality, reliability, and performance of machine learning models.
+- How **reliable** is the model?
+- How does it behave with **unexpected inputs**?
+- **Where** does it fail, and **why**?
+- Can its predictions be **explained**?
+- Does performance stay **consistent** across datasets and conditions?
 
-Instead of focusing only on model accuracy, Proba Labs takes a broader approach to model quality engineering. It examines how models behave, where they fail, how robust they are, and where improvements can be made.
+**Proba Labs** is an AI/ML Model Evaluation and Quality Engineering Platform that brings testing, performance analysis, robustness assessment, and optimization insights into a single environment. It is built for developers, ML engineers, researchers, and AI teams who need to understand the *real* quality of their models, not just a headline accuracy number.
 
-The goal is to help developers, AI engineers, and startups make informed decisions about their machine learning systems before putting them into production.
+## 🔬 Philosophy
 
-## 🔬 What Is Proba Labs?
+> **Model accuracy does not automatically mean model reliability.**
 
-Proba Labs is an AI/ML quality assurance and evaluation platform that brings multiple model-testing and analysis capabilities into one unified environment.
+A model can score exceptionally well on a held-out test set and still struggle with unfamiliar inputs, distribution shifts, edge cases, or real-world conditions. Proba Labs evaluates quality across six dimensions:
 
-It is intended to support different categories of machine learning models, frameworks, and evaluation workflows.
+| Dimension | Guiding Question |
+|---|---|
+| 🎯 **Performance** | How effectively does the model perform? |
+| 🛡️ **Reliability** | How consistently does it produce dependable results? |
+| 💪 **Robustness** | How well does it handle unexpected or modified inputs? |
+| ⚖️ **Fairness** | Does performance vary across different data groups? |
+| 🔍 **Explainability** | Can its predictions and behavior be understood? |
+| 📐 **Stability** | Does behavior remain consistent under changing conditions? |
 
-The platform is built around a simple principle: **a model should not be judged by accuracy alone.**
+## ⚙️ Evaluation Pipeline
 
-A reliable model should also demonstrate robustness, consistency, fairness, explainability, and predictable behaviour under different conditions.
+Every evaluation follows a structured, repeatable pipeline.
 
-Proba Labs aims to make these characteristics measurable through structured evaluations, automated testing, analytical insights, and human-reviewed optimization.
+```mermaid
+flowchart LR
+    A[01 Model Ingestion] --> B[02 Configuration]
+    B --> C[03 Evaluation]
+    C --> D[04 Robustness Testing]
+    D --> E[05 Analysis]
+    E --> F[06 Optimization]
+    F --> G[07 Reporting]
+```
 
-## ⚙️ How It Works
-
-Proba Labs follows a structured model evaluation workflow:
-
-1. **Model Ingestion:** Bring a machine learning model into the evaluation environment.
-2. **Configuration:** Define datasets, evaluation parameters, and testing conditions.
-3. **Model Evaluation:** Run performance assessments using relevant metrics.
-4. **Robustness & Stress Testing:** Examine model behaviour under challenging input conditions.
-5. **Analysis:** Identify weaknesses, failure patterns, and potential reliability issues.
-6. **Optimization:** Explore improvement opportunities through controlled, human-approved optimization.
-7. **Reporting:** Present evaluation results, comparisons, and actionable insights.
+| Stage | Description |
+|---|---|
+| **01 · Model Ingestion** | Introduce a machine learning model into the evaluation environment. |
+| **02 · Configuration** | Configure datasets, evaluation parameters, and testing conditions. |
+| **03 · Evaluation** | Execute structured assessments using relevant performance metrics. |
+| **04 · Robustness Testing** | Examine model behavior under modified and challenging inputs. |
+| **05 · Analysis** | Identify weaknesses, inconsistencies, and failure patterns. |
+| **06 · Optimization** | Explore improvements through controlled evaluation and human oversight. |
+| **07 · Reporting** | Present findings, comparisons, and actionable insights. |
 
 ## 🧩 Core Capabilities
 
-- **Model Evaluation:** Evaluate machine learning models using structured testing methodologies and relevant performance metrics.
-- **Robustness Testing:** Examine model stability when exposed to noisy, altered, or unexpected inputs.
-- **Stress Testing:** Assess model behaviour under challenging evaluation conditions.
-- **Fairness Analysis:** Identify potential performance disparities across different data groups.
-- **Explainability:** Understand model predictions and the factors influencing their outputs.
-- **Failure Analysis:** Discover incorrect predictions, weaknesses, and recurring failure patterns.
-- **Drift Detection:** Identify potential changes in data distributions and model behaviour over time.
-- **Model Comparison:** Compare multiple models using consistent evaluation criteria.
-- **Semi-Automated Optimization:** Explore potential improvements while retaining human oversight and approval.
-- **Evaluation Reports:** Organize findings into structured reports that make model quality easier to understand.
+| Capability | What It Delivers |
+|---|---|
+| 📊 **Model Evaluation** | Structured assessment using statistical and performance metrics. |
+| 📈 **Performance Analysis** | Measurable indicators, analytical summaries, and visualizations. |
+| 🧨 **Robustness & Stress Testing** | Behavior under noisy, modified, and adversarial-style inputs. |
+| ⚖️ **Fairness Analysis** | Performance disparities across data groups and conditions. |
+| 🔍 **Model Explainability** | Insight into the factors that drive predictions. |
+| 🩺 **Failure Analysis** | Incorrect predictions, recurring errors, and failure patterns. |
+| 🌊 **Data & Model Drift Analysis** | Shifts in data distributions and degradation over time. |
+| 🆚 **Model Comparison** | Side-by-side evaluation under consistent criteria. |
+| 💡 **Optimization Insights** | Human-reviewed recommendations from controlled experiments. |
+| 📝 **Evaluation Reporting** | Clear reports that support informed engineering decisions. |
+
+## 🏛️ Architecture
+
+```mermaid
+flowchart TB
+    subgraph Client
+        UI[React + TypeScript UI]
+    end
+
+    subgraph Backend
+        API[FastAPI Service]
+        Worker[Celery Workers]
+    end
+
+    subgraph ML["ML & Evaluation Engine"]
+        Eval[Metrics & Robustness]
+        Explain[SHAP Explainability]
+        Opt[Optuna Optimization]
+    end
+
+    subgraph Data
+        DB[(PostgreSQL)]
+        Cache[(Redis)]
+        Store[(MinIO / S3)]
+    end
+
+    UI <--> API
+    API --> Worker
+    API <--> DB
+    API <--> Cache
+    Worker --> Eval
+    Worker --> Explain
+    Worker --> Opt
+    Worker <--> Store
+    Worker --> DB
+```
 
 ## 🏗️ Technology Stack
 
-Proba Labs uses a modern technology stack combining web engineering, machine learning, data processing, and infrastructure components.
+<details open>
+<summary><b>Frontend Engineering</b></summary>
 
-### Frontend
+<br/>
+
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
 | Technology | Purpose |
 |---|---|
 | React | Component-based user interface |
 | TypeScript | Type-safe frontend development |
-| Vite | Frontend development and build tooling |
-| Tailwind CSS | UI styling and design system |
-| Recharts | Evaluation metrics and visualizations |
+| Vite | Development and build tooling |
+| Tailwind CSS | Consistent UI styling |
+| Recharts | Evaluation data visualization |
 | TanStack Query | Server-state management |
-| React Router | Application navigation |
 
-### Backend
+</details>
+
+<details open>
+<summary><b>Backend Engineering</b></summary>
+
+<br/>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white)
 
 | Technology | Purpose |
 |---|---|
 | Python | Core application and ML ecosystem |
-| FastAPI | Backend API and service layer |
-| Pydantic | Data validation and schemas |
-| SQLAlchemy 2.0 | Database interaction |
+| FastAPI | Backend API development |
+| Pydantic | Data validation and schema management |
+| SQLAlchemy | Database interaction |
 | Alembic | Database migrations |
 
-### Machine Learning & Data Science
+</details>
+
+<details open>
+<summary><b>Machine Learning & Data Science</b></summary>
+
+<br/>
+
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
+![ONNX](https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white)
 
 | Technology | Purpose |
 |---|---|
-| Scikit-learn | Traditional ML evaluation and algorithms |
-| NumPy | Numerical computation |
-| Pandas | Dataset processing and analysis |
-| PyTorch | Deep learning model support |
-| TensorFlow | Deep learning model support |
+| Scikit-learn | ML algorithms and evaluation |
+| PyTorch · TensorFlow | Deep learning model support |
+| NumPy · Pandas | Numerical computation and dataset processing |
 | Hugging Face | Pretrained models and NLP ecosystem |
 | ONNX | Model interoperability |
 | SHAP | Model explainability |
 | Optuna | Hyperparameter optimization |
 
-### Database & Infrastructure
+</details>
+
+<details open>
+<summary><b>Database & Infrastructure</b></summary>
+
+<br/>
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white)
+![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=flat-square&logo=minio&logoColor=white)
 
 | Technology | Purpose |
 |---|---|
 | PostgreSQL | Persistent application data |
 | Redis | Caching and task coordination |
-| Celery | Asynchronous evaluation tasks |
-| Docker | Containerization |
+| Celery | Asynchronous task processing |
+| Docker | Application containerization |
 | MinIO / S3 | Model and dataset storage |
 
-### Testing & Code Quality
+</details>
+
+<details open>
+<summary><b>Testing & Code Quality</b></summary>
+
+<br/>
+
+![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
+![Ruff](https://img.shields.io/badge/Ruff-D7FF64?style=flat-square&logo=ruff&logoColor=black)
+![Mypy](https://img.shields.io/badge/Mypy-2A6DB2?style=flat-square&logo=python&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 
 | Technology | Purpose |
 |---|---|
-| Pytest | Backend and ML testing |
+| Pytest | Automated Python testing |
 | Ruff | Python linting and formatting |
 | Mypy | Static type checking |
 | Playwright | Frontend end-to-end testing |
 | GitHub Actions | Continuous integration |
 
-## 🎯 The Vision
+</details>
 
-As artificial intelligence becomes increasingly integrated into real-world applications, ensuring model quality and reliability becomes just as important as developing the models themselves.
+## 🗺️ Roadmap
 
-Proba Labs aims to make comprehensive model evaluation more accessible to individual developers, engineering teams, and AI startups.
+- [x] Product vision, evaluation dimensions, and pipeline design
+- [ ] Core backend API and data models
+- [ ] Model ingestion and dataset configuration
+- [ ] Performance metrics and evaluation engine
+- [ ] Robustness and stress testing suite
+- [ ] Fairness and explainability modules
+- [ ] Drift analysis and model comparison
+- [ ] Optimization insights with human review
+- [ ] Reporting and dashboard experience
+- [ ] Public release and documentation
 
-The long-term vision is to establish a unified quality engineering environment where machine learning systems can be systematically tested, understood, compared, and improved.
+> Proba Labs is under active development. Features and structure may change as the platform evolves.
 
-Rather than treating model evaluation as an isolated final step, Proba Labs aims to make it an essential part of the machine learning development lifecycle.
+## 🤝 Contributing
+
+Contributions, ideas, and feedback are welcome.
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit with a clear message: `git commit -m "feat: add your feature"`
+4. Push the branch and open a Pull Request
+
+Please keep changes focused, tested, and consistent with the project's linting and typing standards.
+
+## 👤 Author
+
+**Shreyas Pathak**
+
+[![GitHub](https://img.shields.io/badge/GitHub-ifshreyas-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ifshreyas)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-shreyaspathakk-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/shreyaspathakk)
 
 ---
 
-<p align="center">
-  <b>PROBA LABS</b><br/>
-  <i>Engineering confidence in intelligent systems.</i>
-</p>
+<div align="center">
+
+**🧪 PROBA LABS**
+
+*Because building an intelligent model is an achievement. Knowing how reliably it performs is engineering.*
+
+Built with curiosity, engineering, and a commitment to reliable AI.
+
+</div>

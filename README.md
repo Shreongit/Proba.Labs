@@ -30,10 +30,7 @@ A unified environment for evaluating machine learning models, uncovering weaknes
 [Philosophy](#-philosophy) •
 [Pipeline](#-evaluation-pipeline) •
 [Capabilities](#-core-capabilities) •
-[Architecture](#-architecture) •
-[Tech Stack](#-technology-stack) •
-[Roadmap](#-roadmap) •
-[Contributing](#-contributing)
+[Tech Stack](#-technology-stack)
 
 </div>
 
@@ -70,16 +67,6 @@ A model can score exceptionally well on a held-out test set and still struggle w
 
 Every evaluation follows a structured, repeatable pipeline.
 
-```mermaid
-flowchart LR
-    A[01 Model Ingestion] --> B[02 Configuration]
-    B --> C[03 Evaluation]
-    C --> D[04 Robustness Testing]
-    D --> E[05 Analysis]
-    E --> F[06 Optimization]
-    F --> G[07 Reporting]
-```
-
 | Stage | Description |
 |---|---|
 | **01 · Model Ingestion** | Introduce a machine learning model into the evaluation environment. |
@@ -104,42 +91,6 @@ flowchart LR
 | 🆚 **Model Comparison** | Side-by-side evaluation under consistent criteria. |
 | 💡 **Optimization Insights** | Human-reviewed recommendations from controlled experiments. |
 | 📝 **Evaluation Reporting** | Clear reports that support informed engineering decisions. |
-
-## 🏛️ Architecture
-
-```mermaid
-flowchart TB
-    subgraph Client
-        UI[React + TypeScript UI]
-    end
-
-    subgraph Backend
-        API[FastAPI Service]
-        Worker[Celery Workers]
-    end
-
-    subgraph ML["ML & Evaluation Engine"]
-        Eval[Metrics & Robustness]
-        Explain[SHAP Explainability]
-        Opt[Optuna Optimization]
-    end
-
-    subgraph Data
-        DB[(PostgreSQL)]
-        Cache[(Redis)]
-        Store[(MinIO / S3)]
-    end
-
-    UI <--> API
-    API --> Worker
-    API <--> DB
-    API <--> Cache
-    Worker --> Eval
-    Worker --> Explain
-    Worker --> Opt
-    Worker <--> Store
-    Worker --> DB
-```
 
 ## 🏗️ Technology Stack
 
@@ -250,39 +201,6 @@ flowchart TB
 | GitHub Actions | Continuous integration |
 
 </details>
-
-## 🗺️ Roadmap
-
-- [x] Product vision, evaluation dimensions, and pipeline design
-- [ ] Core backend API and data models
-- [ ] Model ingestion and dataset configuration
-- [ ] Performance metrics and evaluation engine
-- [ ] Robustness and stress testing suite
-- [ ] Fairness and explainability modules
-- [ ] Drift analysis and model comparison
-- [ ] Optimization insights with human review
-- [ ] Reporting and dashboard experience
-- [ ] Public release and documentation
-
-> Proba Labs is under active development. Features and structure may change as the platform evolves.
-
-## 🤝 Contributing
-
-Contributions, ideas, and feedback are welcome.
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Commit with a clear message: `git commit -m "feat: add your feature"`
-4. Push the branch and open a Pull Request
-
-Please keep changes focused, tested, and consistent with the project's linting and typing standards.
-
-## 👤 Author
-
-**Shreyas Pathak**
-
-[![GitHub](https://img.shields.io/badge/GitHub-ifshreyas-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ifshreyas)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-shreyaspathakk-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/shreyaspathakk)
 
 ---
 
